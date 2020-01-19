@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BackBone Chceck</title>
+    <link rel="stylesheet" href="http://localhost/wp-content/plugins/woocommerce/assets/css/admin.css?ver=3.8.0">
+</head>
+
+<body>
+    <table class="wc-shipping-zone-methods widefat">
+        <thead>
+            <tr>
+                <th class="wc-shipping-zone-method-sort"></th>
+                <th class="wc-shipping-zone-method-title">Title</th>
+                <th class="wc-shipping-zone-method-enabled">Enabled</th>
+                <th class="wc-shipping-zone-method-description">Description</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4">
+                    <button type="submit" class="button wc-shipping-zone-add-method" value="Add shipping method">Add
+                        shipping method</button>
+                </td>
+            </tr>
+        </tfoot>
+        <tbody class="wc-shipping-zone-method-rows ui-sortable" style="position: static; zoom: 1;">
+            <tr data-id="8" data-enabled="yes">
+                <td width="1%" class="wc-shipping-zone-method-sort"></td>
+                <td class="wc-shipping-zone-method-title">
+                    <a class="wc-shipping-zone-method-settings"
+                        href="admin.php?page=wc-settings&amp;tab=shipping&amp;instance_id=8">Local pickup</a>
+                    <div class="row-actions">
+                        <a class="wc-shipping-zone-method-settings"
+                            href="admin.php?page=wc-settings&amp;tab=shipping&amp;instance_id=8">Edit</a> | <a href="#"
+                            class="wc-shipping-zone-method-delete">Delete</a>
+                    </div>
+                </td>
+                <td width="1%" class="wc-shipping-zone-method-enabled"><a href="#"><span
+                            class="woocommerce-input-toggle woocommerce-input-toggle--enabled">Yes</span></a></td>
+                <td class="wc-shipping-zone-method-description">
+                    <strong class="wc-shipping-zone-method-type">Local pickup</strong>
+                    <p>Allow customers to pick up orders themselves. By default, when using local pickup store base
+                        taxes will apply regardless of customer address.</p>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/1.0.0/backbone-min.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
