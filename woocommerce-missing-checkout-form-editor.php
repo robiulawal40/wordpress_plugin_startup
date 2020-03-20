@@ -8,6 +8,7 @@ Author: Robiul Awal
 Author URI: https://github.com/robiulawal40/
 Text Domain: woocommerce-mcfe
 Domain Path: /languages/
+
 */
 
 defined( 'ABSPATH' ) or die( 'Stop!!' );
@@ -58,21 +59,23 @@ final class woocommerceMCFE{
 	*/
 	 function __construct(){
 
+		// Will add a link to the plugin admin Area
 		add_filter( 'plugin_action_links_woocommerce-missing-checkout-form-editor/woocommerce-missing-checkout-form-editor.php', array( $this, 'ns_settings_link' ) );
-		//plugins\woocommerce\includes\admin\class-wc-admin-settings.php
-		add_filter("woocommerce_get_settings_pages", array( $this, "woocommerce_add_settings_pages") );
 		
-		add_action('admin_menu', array( $this,  'register_my_custom_submenu_page'),99);
+		//add_action('admin_menu', array( $this,  'register_my_custom_submenu_page'),99);
 
 		 $this->set_constants();
-		 $this->includes();		 		 
+		 $this->includes();	
+		 
+		//plugins\woocommerce\includes\admin\class-wc-admin-settings.php
+		//add_filter("woocommerce_get_settings_pages", array( $this, "woocommerce_add_settings_pages") );
 		}
 
-		public function woocommerce_add_settings_pages( $settings ){
+	// 	public function woocommerce_add_settings_pages( $settings ){
 			
-			$settings[] = include MCFEDIR."inc/class-wc-admin-settings.php";
-			return $settings;
-		}	
+	// 		$settings[] = include MCFEDIR."inc/class-wc-admin-settings.php";
+	// 		return $settings;
+	// 	}	
 
 	public function tab_link(){
 
@@ -80,11 +83,11 @@ final class woocommerceMCFE{
 
 	}
 
-	public function register_my_custom_submenu_page() {
-		global $submenu;
-		$submenu['woocommerce'][] = array( 'Checkout settings', 'manage_options', $this->tab_link() );
+	// public function register_my_custom_submenu_page() {
+	// 	global $submenu;
+	// 	$submenu['woocommerce'][] = array( 'Checkout settings', 'manage_options', $this->tab_link() );
 
-		}
+	// 	}
         
      public function ns_settings_link( $links ) {
 
@@ -136,6 +139,7 @@ final class woocommerceMCFE{
 	public function includes(){
 		require_once MCFEDIR."inc/functions.php";
 		require_once MCFEDIR."inc/class-checkout-edit.php";	
+		require_once MCFEDIR."inc/class-admin-settings.php";	
     }
 }
 

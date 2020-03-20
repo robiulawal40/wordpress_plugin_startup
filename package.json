@@ -1,0 +1,26 @@
+{
+  "name": "woocommerce-missing-checkout-form-editor",
+  "version": "1.0.0",
+  "description": "=== WooCommerce Missing Checkout Form Editor ===\r Contributors: robiulawal\r Tags:woocommerce checkout field editor, checkout field editor, woocommerce checkout manager, checkout field customizer, woocommerce checkout form editor, woocommerce missing checkout form editor\r License: GPLv3\r License URI: http://www.gnu.org/licenses/gpl-3.0.html\r Requires at least: 4.0\r Tested up to: 5.2.1\r WC tested up to: 3.7.0\r WC requires at least: 3.1.0\r Version: 1.2.9\r Stable Tag: 1.2.9",
+  "main": "index.js",
+  "scripts": {
+    "watch-js": "nodemon js/index.js",
+    "watch-php": "nodemon --exec C:\\xampp\\php\\php.exe \"c:\\xampp\\htdocs\\wp-load.php\"",
+    "br": "node open-browser assets http://localhost/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robiulawal40/wordpress_plugin_startup.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robiulawal40/wordpress_plugin_startup/issues"
+  },
+  "homepage": "https://github.com/robiulawal40/wordpress_plugin_startup#readme",
+  "dependencies": {
+    "node-watch": "^0.6.3",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {}
+}
